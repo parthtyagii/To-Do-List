@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="cssRegister.css">
+    <title>Register</title>
+</head>
+
+<body>
+    <nav>
+        <h1>To-Do List</h1>
+    </nav>
+
+    <main>
+        <form action="/register" method="post">
+            <div class="registerBox">
+                <div class="credentials">
+                    Sign Up
+                </div>
+
+                <div class="credentials">
+                    <label for="username" >User Name</label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+
+                <div class="credentials">
+                    <label for="passowrd">Password</label>
+                    <input type="text" id="password" name="password" required>
+                </div>
+
+                <div class="credentials">
+                    <button id="signupbtn">Submit</button>
+                </div>
+                <div id="question">Already registered? <a href="/login">login</a></div>
+            </div>
+        </form>
+    </main>
+
+</body>
+
+</html>

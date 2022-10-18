@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="cssHomepage.css">
+    <title>To-Do</title>
+</head>
+
+<body>
+    <form action="/logout" method="get">
+        <nav>
+            <!-- <h1>To-Do Lists</h1> -->
+            <div class="headings"></div>
+            <div class="headings" id="title">To-Do List</div>
+            <div class="headings"><button id="logoutbtn">logout</button></div>
+        </nav>
+    </form>
+
+    <main>
+        <div id="add_task">
+            <form action="/homepage" method="post">
+                <input type="text" name="taskbar" id="taskbar" placeholder="  Add a task">
+                <button name="addbtn" id="addbtn">Add</button>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <% if(tasks.length===0){ %>
+            Nothing to do.
+            <% }else{ %>
+                <% for(let t of tasks){ %>
+                    <form action="/homepage?_method=delete" method="post">
+                        <div class="new_task">
+                            <input name="box" type="checkbox" class="box">
+                            <div class="task">
+                                <%= t.todos %>
+                            </div>
+                            <button class="delbtn" name="delbtn" value=<%=t._id %>>Delete</button>
+                        </div>
+                    </form>
+
+                    <% } %>
+                        <% } %>
+    </footer>
+    <script src="/public/jsHomepage.js"></script>
+</body>
+
+</html>
