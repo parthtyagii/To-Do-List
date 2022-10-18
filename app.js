@@ -176,7 +176,7 @@ app.use((err, req, res, next) => {
 })
 
 
-
+const PORT = process.env.Port || 2000;
 app.listen(2000, () => {
-    console.log("Server 2000 running!");
+    console.log(`Server ${PORT} running!`);
 })
