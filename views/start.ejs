@@ -12,42 +12,22 @@
 
 <body>
     <nav class="navbar bg-light">
-        <div class="container-fluid">
+        <div class="container-fluid d-flex justify-content-center">
             <h1>To-Do List</h1>
-            <form action="/logout" method="get">
-                <button class="btn btn-outline-dark" type="submit">
-                    logout
-                </button>
-            </form>
         </div>
     </nav>
 
-    <main>
-        <form action="/homepage" method="post">
+    <main class="container">
+        <form action="/register" method="get">
             <div id="add_task">
-                <input col="2" type="text" name="taskbar" id="taskbar" placeholder="  Add a task" required>
+                <input col="2" type="text" name="taskbar" id="taskbar" placeholder="  Add a task">
                 <button class="btn btn-primary" name="addbtn" id="addbtn">Add</button>
             </div>
         </form>
     </main>
 
     <footer>
-        <% if(tasks.length===0){ %>
-            Nothing to do.
-            <% }else{ %>
-                <% for(let t of tasks){ %>
-                    <form action="/homepage?_method=delete" method="post">
-                        <div class="new_task">
-                            <!-- <input name="box" type="checkbox" class="box"> -->
-                            <div class="task">
-                                <%= t.todos %>
-                            </div>
-                            <button class="delbtn btn btn-danger" name="delbtn" value=<%=t._id %>>Delete</button>
-                        </div>
-                    </form>
-
-                    <% } %>
-                        <% } %>
+        Nothing to do.
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"

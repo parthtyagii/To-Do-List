@@ -31,16 +31,17 @@ nav {
 }
 
 #logoutbtn {
-    width: 70px;
+    /* width: 70px;
     height: 40px;
     margin-left: 10px;
     border-radius: .5rem;
-    font-size: large;
+    font-size: large; */
 }
 
 main {
-    width: 100%;
     margin-top: 10px;
+    width: 100%;
+    height:auto;
     /* background-color: aliceblue; */
 
     display: flex;
@@ -51,7 +52,7 @@ main {
 
 #add_task {
     height: 60px;
-    width: 80%;
+    width: 100%;
     /* background-color: black; */
 
     display: flex;
@@ -62,7 +63,7 @@ main {
 
 #taskbar {
     width: 350px;
-    height: 35px;
+    height: 40px;
     border-radius: .5rem;
     font-size: large;
 }
@@ -117,8 +118,8 @@ footer {
     margin-bottom: 5%;
     font-size: large;
 
-    overflow: scroll;
-    white-space: nowrap;
+    overflow-y: scroll;
+    /* white-space: nowrap; */
 
     display: flex;
     flex-direction: row;
@@ -128,11 +129,39 @@ footer {
 
 .delbtn {
     width: 70px;
-    height: 35px;
+    height: 40px;
     margin-top: 5%;
     margin-bottom: 5%;
     margin-right: 5%;
     border-radius: .5rem;
     font-size: medium;
+}
 
+@media(max-width:440px){
+    #add_task{
+        /* display: flex; */
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 90px;
+
+        margin-bottom: 20px;
+    }
+    nav{
+        margin-bottom: 20px;
+    }
+
+    #addbtn{
+        width: 250px;
+        margin-left: 0;
+    }
+
+    #taskbar{
+        width: 250px;
+        margin-bottom: 10px;
+    }
+
+    .new_task{
+        width: 250px;
+    }
 }

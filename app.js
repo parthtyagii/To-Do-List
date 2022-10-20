@@ -52,6 +52,12 @@ app.use(express.static('public'));
 app.use(express.urlencoded({ extended: true }));
 //-----------------------------------------------------------------------------------------
 
+//starting page...
+app.get('/', async (req, res) => {
+    req.session.userId = null;
+    req.session.isLogedIn = null;
+    res.render('start');
+})
 
 
 //registering part...
@@ -60,6 +66,8 @@ app.get('/register', async (req, res) => {
     // await TODO.deleteMany({});
     // await USER.deleteMany({});
 
+    req.session.userId = null;
+    req.session.isLogedIn = null;
     res.render('register');
 })
 
@@ -81,6 +89,8 @@ app.post('/register', async (req, res, next) => {
 
 //login/logout part...
 app.get('/login', async (req, res) => {
+    req.session.userId = null;
+    req.session.isLogedIn = null;
     res.render('login');
 })
 
@@ -130,6 +140,7 @@ app.get('/homepage', async (req, res, next) => {
 
 app.post('/homepage', async (req, res, next) => {
     const { taskbar } = req.body;
+
     try {
         const task = new TODO({ todos: taskbar });
         await task.save();
