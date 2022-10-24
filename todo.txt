@@ -1,0 +1,25 @@
+to-do mongo password : parthTodo
+
+
+
+
+mongodb+srv://parthtyagii:<password>@cluster0.bcnlvq2.mongodb.net/?retryWrites=true&w=majority
+
+
+
+
+
+https://agile-caverns-87130.herokuapp.com/register
+
+
+
+
+
+
+
+
+
+
+
+
+
