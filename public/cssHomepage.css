@@ -66,6 +66,7 @@ main {
     height: 40px;
     border-radius: .5rem;
     font-size: large;
+    padding:10px;
 }
 
 #addbtn {
