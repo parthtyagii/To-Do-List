@@ -10,7 +10,7 @@ It is a web app to list down your daily task.
 - Front-end: HTML, CSS, BOOTSTRAP
 - Back-end: Node.js, MongoDB, Heroku
 
-# Screenshots
+## Screenshots
 
 ![](https://github.com/parthtyagii/To-Do-List/blob/master/login%20page.png)
 
